@@ -1,0 +1,22 @@
+body{
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 80px); /* 8 columns */
+    grid-template-rows: repeat(8, 80px);    /* 8 rows */
+    background-color: white;
+    border: 8px solid black;
+    padding: 5px;
+}
+.cell1 {
+    background-color: rgb(210, 150, 176);
+  }
+  .cell{
+    background-color: rgb(97, 10, 87);
+  }

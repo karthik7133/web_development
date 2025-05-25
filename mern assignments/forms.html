@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  style="display: flex; flex-direction: row; text-align: center; height: 1000px;">
+        <div style="text-align: center; padding-top: 200px;padding-left: 50px;">
+            <img src="bg2.png" alt="">
+        </div>
+
+        <div style="padding-top: 100px;width: 500px;flex: 1;padding: 20px;">
+            <h1 style="text-align: center;">Doctor Appintment form</h1>
+            <hr color="red">
+
+            <form action="" style="text-align: left;" method="get">
+                <label for="date" style="display: inline-block; width: 200px;">Appointment Date</label>
+                <input type="date" id="date" class="date"><br><br>
+                <label for="time" style="display: inline-block; width: 200px;">Appointment Time</label>
+                <input type="time" id="time" class="time"><br><br>
+                <label for="name" style="display: inline-block; width: 200px;">Name</label>  
+                <input type="text" id="name" class="name" placeholder="First Name" >
+                <input type="text" id="name" class="name" placeholder="First Name"><br><br>
+                <label for="gender" style="width: 200px; display: inline-block;">Gender</label>
+                <label for="male" name="gender">Male</label><input type="radio" id="male" class="male" name="gender">
+                <label for="female" name="gender">Female</label><input type="radio" id="female" class="female" name="gender"><br><br>
+                <label for="phnno" style="display: inline-block; width: 200px;">Phone </label>
+                <input type="text" placeholder="phone"><br><br>
+                <label for="Adress" style="display: inline-block;width: 200px;">Adress</label>
+                <input type="text" placeholder="city" style="margin-right: 5px;"><input type="text" placeholder="state"><br><br>
+                <label for="query" style="display: inline-block ;width: 200px;height: 50px; vertical-align: middle;">Your Query</label>
+                <textarea name="query" id="query" style="width: 350px;height: 50px;"></textarea><br><br>
+                <label for="Appintmenttype" style="width: 200px; display: inline-block;">Appointment Type </label>
+                <label for="selection"> select with appointment type(s) you require </label><br>
+                <input type="checkbox" style="margin-left: 210px;">Cervix checkup <br>
+                <input type="checkbox" style="margin-left: 210px;">Heart checkup <br>
+                <input type="checkbox" style="margin-left: 210px;">Eye  checkup <br>
+                <input type="checkbox" style="margin-left: 210px;">Hearing Test <br><br>
+                <input type="submit" style="margin-left: 210px;">
+            </form>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
