@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(image.jpg);
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      border: 1px solid black;
+    }
+    .img{
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+        border-radius: 50%;
+        
+    }
+
+    .box {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      font-weight: bold;
+    }
+    hr{
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 2px solid gray;
+    }
+
+    .base {
+      background-color: black;
+      opacity: 0.7;
+      padding: 30px;
+      color: white;
+    }
+
+    .overlay {
+      position: absolute;
+      top:-100px;
+      left: 200px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50em;
+      opacity: 1;
+    }input{
+        background: none;
+        border: none;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        padding: 15px;
+        padding-bottom: 5px;
+    }input:focus{
+      outline: none;
+    }
+    .bottom{
+      display: inline;
+      position: absolute;
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box base">
+        <h1 style="margin-top: 90px; text-align: center;">Login info</h1><br>
+        <input type="text" placeholder="Your Email adress"><hr >
+        <input type="text" placeholder="Your Password"><hr >
+        
+        <div class="bottom">
+          <input type="checkbox" id="agree" style="width: 20px;">
+          <label for="agree">Agree with <p style="text-decoration: underline; display: inline;">Terms & conditions </p> </label>
+        </div>
+        
+        
+        
+
+    </div>
+    <div class="box overlay">
+        <img class="img" src="user.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
