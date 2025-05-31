@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: white;
+            
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:  rgb(89, 86, 86);
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 250px;
+            padding: 10px;
+            border-color: 2px solid black;
+            border-radius: 3px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+        }
+
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(89, 86, 86);
+            flex-wrap: wrap;
+            gap: 5px;
+
+        }
+
+        .buttons button{
+            flex: 1 1 calc(25% - 5px); 
+            width: 20px; 
+            height: 50px;
+            border: 3px solid black;
+            border-radius: 3px;
+            background-color: rgb(36, 175, 156);
+            box-shadow: 1px 0px 4px rgb(5, 68, 72);
+            font-family: monospace;
+            font-size: 20px;
+            color: white;
+        }.hello{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            height: 30px;
+            background-color: white;
+            font-size: 25px;
+            padding: 5px;
+            border-radius: 2px;
+            
+        }button:active{
+            background-color: rgb(8, 86, 86);
+            width:25px ;
+            height: 50px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hello">0</div>
+        <div class="buttons">
+            
+            <button>C</button>
+            <button>%</button>
+            <button><=</button>
+            <button>/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
+    </div>
+    
+</body>
+</html>
