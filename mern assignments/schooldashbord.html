@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik23bce20022</title>
+    <style>
+        body{
+            height: 100vh;
+            background: linear-gradient(to bottom, rgb(230, 230, 250), rgb(148, 112, 196));
+            background-size: cover;
+            padding: 0px;
+        }.container{
+            display: flex;
+            height: 100%;
+            gap:1px;
+            width: 100%;
+        }.dashbord{
+            padding: 10px;
+            height: 100%;
+            width:350px ;
+            background-color: rgba(53, 208, 11, 0.8);
+            border: 1px solid white;
+            border-radius: 4px;
+        }.side{
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid white;
+            border-radius: 4px;
+        }.dashbord button{
+            display:block;
+            padding: 10px;
+            color: white;
+            border: none;
+            margin-bottom: 5px;
+            background-color: rgb(240, 248, 255,0.3);
+        }.data{
+            display: flex;
+            margin-top: 100px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }.data div{
+            text-align: center;
+            flex:1 1 calc(50%-20px) ;
+            height: 120px;
+            width: 48%;
+            padding-bottom: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px black;
+        }strong{
+            font-size: 25px;
+            color:rgba(53, 208, 11) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashbord">
+            <h1 style="color: white;">School Dashboard</h1>
+            <button>Dashboard</button>
+            <button>Students</button>
+            <button>Teachers</button>
+            <button>Classes</button>
+            <button>Exams</button>
+            <button>Library</button>
+            <button>Settings</button>
+        </div>
+        <div class="side">
+            <h1 style="color: rgba(53, 208, 11);text-align: center; box-shadow: 1px 1px 3px black;">Welcome to the School Dashboard </h1>
+            <div class="data">
+                <div >
+                    <h1>Total Students</h1>
+                    <strong>500</strong>
+                </div>
+                <div >
+                    <h1>Total Teachers</h1>
+                    <strong>50</strong>
+                </div>
+                <div >
+                    <h1>Classes</h1>
+                    <strong>20</strong>
+                </div>
+                <div >
+                    <h1>Upcoming Exams</h1>
+                    <strong>5</strong>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
