@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik23bce20022</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x = prompt("Enter your marks");
+        x = Number(x);  // Convert to number since prompt gives a string
+        let c="Grade : ";
+        if (x < 40) {
+            document.write(c+'F');
+        } else if (x >= 90) {
+            document.write(c+'S');
+        } else if (x >= 80) {
+            document.write(c+'A');
+        } else if (x >= 70) {
+            document.write(c+'B');
+        } else if (x >= 60) {
+            document.write(c+'C');
+        } else if (x >= 50) {
+            document.write(c+'D');
+        } else if (x >= 40) {
+            document.write(c+'E');
+        } else {
+            document.write("Enter valid marks");
+        }
+    </script>
+    
+    
+</body>
+</html>
