@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik23bce20022</title>
+    <style>
+        *{
+            color: white;
+            font-family: monospace;
+            font-size: 25px;
+            margin: 0px;
+        }
+        body{
+            display: flex;
+            background-image: url(bg7.jpg);
+            align-items: center;
+            background-size: 100% 100%;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        table{
+            background: linear-gradient(135deg, rgb(0, 65, 77,0.6) 0%, rgb(0, 124, 153,0.6) 30%, rgb(0, 179, 213,0.6) 60%, rgb(63, 231, 242,0.6) 100%);
+
+            border: none;
+            padding: 12px;
+            border-spacing:3px;
+            box-shadow: 0px 0px 20px #00B3D5;
+            border-collapse: separate;
+            border-radius: 10px;
+            
+        }
+        tr th,td{
+            border: none;
+            box-shadow:0px 0px 10px  black ;
+            margin: 2px;
+            text-align: left;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        var c=Array.from('karthik');
+        var d=[1,2,3,4];
+        var d1=[2,1,0];
+        var w=Array.of(1,2,3);
+        var e=Array.of(w);e.push(9);
+        var r=[...e];r.pop();
+        var t=[...r];t.unshift(0)
+        var y=[...t];y.shift();
+        var u=[...w];u.splice(0,1);
+        var i=[1,2,3,3];
+        var a=d.find(x=>x>0);
+        var s=d1.sort()
+    </script>
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>output</th>
+        </tr>
+        <tr>
+            <td>Array.from()</td>
+            <td id="q">c</td>
+        </tr>
+        <tr>
+            <td>Array.of()</td>
+            <td id="w">c</td>
+        </tr>
+        <tr>
+            <td>Array.push()</td>
+            <td id="e"></td>
+        </tr>
+        <tr>
+            <td>Array.pop()</td>
+            <td id="r"></td>
+        </tr>
+        <tr>
+            <td>Array.unshift()</td>
+            <td id="t"></td>
+        </tr>
+        <tr>
+            <td>Array.shift()</td>
+            <td id="y"></td>
+        </tr>
+        <tr>
+            <td>Array.splice()</td>
+            <td id="u"></td>
+        </tr>
+        <tr>
+            <td>Array.indexof(2)</td>
+            <td id="i"></td>
+        </tr>
+        <tr>
+            <td>Array.lastindexof(3)</td>
+            <td id="o"></td>
+        </tr>
+        <tr>
+            <td>Array.ar(0)</td>
+            <td id="p"></td>
+        </tr>
+        <tr>
+            <td>Array.find()</td>
+            <td id="a"></td>
+        </tr>
+        <tr>
+            <td>Array.sort()</td>
+            <td id="s"></td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("q").textContent=c.toString();
+        document.getElementById("w").textContent=w.toString();
+        document.getElementById("e").textContent=e.toString();
+        document.getElementById("r").textContent=r.toString();
+        document.getElementById("t").textContent=t.toString();
+        document.getElementById("y").textContent=y.toString();
+        document.getElementById("u").textContent=u.toString();
+        document.getElementById("i").textContent=w.indexOf(2)+" -> "+"[1,2,3]";
+        document.getElementById("o").textContent=i.lastIndexOf(3)+" -> "+"[1,2,3,3]";
+        document.getElementById("p").textContent=w.at(0)+" -> "+"[1,2,3]";
+        document.getElementById("a").textContent=a.toString();
+        document.getElementById("s").textContent=s.toString()+" -> [2,1,0]";
+    </script>
+    
+</body>
+</html>

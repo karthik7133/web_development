@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik23bce20022</title>
+    <style>
+        *{
+            color: white;
+            font-family: monospace;
+            font-size: 25px;
+            margin: 0px;
+        }
+        body{
+            display: flex;
+            background-image: url(bg8.jpg);
+            align-items: center;
+            background-size: 100% 100%;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        table{
+            background: linear-gradient(135deg,
+            rgba(42, 0, 68, 0.6) 0%,
+            rgba(128, 0, 197, 0.6) 30%,  
+            rgba(214, 0, 161, 0.6) 60%,  
+            rgba(255, 29, 185, 0.6) 100% 
+            );
+            border: none;
+            padding: 12px;
+            border-spacing:3px;
+            box-shadow: 0px 0px 20px #1b2bd5;
+            border-collapse: separate;
+            border-radius: 10px;
+            
+        }
+        tr th,td{
+            border: none;
+            box-shadow:0px 0px 10px  black ;
+            margin: 2px;
+            text-align: left;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        var c="karthik";
+        var d=c.charAt(0);
+        var d1=[2,1,0];
+        var w=c.indexOf('k');
+        var e=c.lastIndexOf('k');
+        var bool="karthik".includes('kar');
+        var y=c.endsWith('k');
+        var u=c.startsWith('k');
+        var i=c.substr(0,3);
+        var a1="karthik".toUpperCase();
+        var s="karthik".replace("kar","KAR")
+        var g=" space ".trim();
+        var k="I.I.T".split(".");
+    </script>
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>output</th>
+        </tr>
+        <tr>
+            <td>String.length</td>
+            <td id="q">c</td>
+        </tr>
+        <tr>
+            <td>String.charAt(0)</td>
+            <td id="w">c</td>
+        </tr>
+        <tr>
+            <td>String.indexof('k')</td>
+            <td id="e"></td>
+        </tr>
+        <tr>
+            <td>Strlastindex('k')</td>
+            <td id="r"></td>
+        </tr>
+        <tr>
+            <td>str.includes('kar')</td>
+            <td id="m"></td>
+        </tr>
+        <tr>
+            <td>str.endswith('k')</td>
+            <td id="y"></td>
+        </tr>
+        <tr>
+            <td>str.startswith('k)</td>
+            <td id="u"></td>
+        </tr>
+        <tr>
+            <td>str.substr(0,3)</td>
+            <td id="i"></td>
+        </tr>
+        <tr>
+            <td>str.touppercase()</td>
+            <td id="o"></td>
+        </tr>
+        <tr>
+            <td>str.replace()</td>
+            <td id="p"></td>
+        </tr>
+        <tr>
+            <td>str.trim()</td>
+            <td id="a"></td>
+        </tr>
+        <tr>
+            <td>str.split(".")</td>
+            <td id="s"></td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("q").textContent=c.length +" -> karthik";
+        document.getElementById("w").textContent=d;
+        document.getElementById("e").textContent=w;
+        document.getElementById("r").textContent=e;
+        document.getElementById("m").textContent=bool;
+        document.getElementById("y").textContent=y;
+        document.getElementById("u").textContent=u;
+        document.getElementById("i").textContent=i;
+        document.getElementById("o").textContent=a1;
+        document.getElementById("p").textContent=s;
+        document.getElementById("a").textContent=g;
+        document.getElementById("s").textContent=k;
+    </script>
+    
+</body>
+</html>
