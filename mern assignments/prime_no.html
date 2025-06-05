@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0px;
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            /* top:0; right:0; bottom:0; left:0 */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black overlay with 50% transparency */
+            z-index: -1;
+        }
+
+        .container {
+            background-color: rgb(0, 0, 0, 0.4);
+            height: 60vh;
+            width: 60vh;
+            position: relative;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgb(110, 225, 248);
+        }
+
+        label {
+            color: white;
+            margin-right: 50px;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            font-size: 25px;
+
+        }
+
+        input {
+            color: white;
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            font-size: 25px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255,0.1);
+            border: none;
+            box-shadow: 0px 0px 20px rgb(2, 2, 2);
+        }#end{
+            color: white;
+            margin-right: 50px;
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            font-size: 25px;
+        }#b{
+            color: white;
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            font-size: 25px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255,0.1);
+            border: none;
+            box-shadow: 0px 0px 20px rgb(2, 2, 2);
+        }#text{
+            color: white;
+            margin-right: 50px;
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            font-size: 25px;
+        }#c{
+            color: white;
+            position: absolute;
+            top: 300px;
+            left: 150px;
+            font-size: 25px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255,0.1);
+            border: none;
+            overflow: auto;
+            box-shadow: 0px 0px 20px rgb(2, 2, 2);
+        }#generate{
+            position: absolute;
+            bottom:50px;
+            left: 50px;
+            background-color: rgb(0, 0, 0,0.4);
+            border:none;
+            color: white;
+            width: 100px;
+            padding: 5px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 20px rgb(255, 255, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <label for="start" id="start">Start</label>
+        <input type="number" required id="a">
+        <br>
+        <label for="end" id="end">End</label>
+        <input type="number" required id="b">
+        <br>
+        <label for="text" id="text">Primes</label>
+        <textarea name="prime" id="c"></textarea>
+        <button id="generate">Generate</button>
+    </div>
+    <script>
+        
+        let btn=document.getElementById("generate");
+        btn.onclick=function(){
+        let s=parseInt(document.getElementById("a").value);
+        let e=parseInt(document.getElementById("b").value);
+        let r=document.getElementById("c");
+        
+        let str="";
+            for(let i=s;i<=e;i++){
+                
+            let flag=true;
+            if(i==2){
+                str+=2+",";
+                    continue;
+                }
+            for(let j=2;j<i;j++){
+                if(i%j==0){
+                    flag=false;
+                    break;
+                }
+            }if(flag==true){
+                str+=i+",";
+            }
+        }
+            ;
+            
+            str=str.substr(0,str.length-1);
+            r.value=str
+            
+        }
+    </script>
+
+</body>
+
+</html>
