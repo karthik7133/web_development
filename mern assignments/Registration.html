@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <style>
+        @keyframes vibrate {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-3px);
+            }
+
+            50% {
+                transform: translateX(3px);
+            }
+
+            75% {
+                transform: translateX(-3px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .vibrate {
+            animation: vibrate 0.2s linear 3;
+        }
+
+        body {
+            margin: 0px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(bg9.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 65vh;
+            height: 60vh;
+            background-color: rgb(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 20px blue;
+            padding: 50px;
+            color: white;
+        }
+
+        form label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        form input {
+            color: white;
+            margin-bottom: 20px;
+            height: 20px;
+            margin-right: 25px;
+            width: 200px;
+            background-color: rgb(0, 0, 0, 0.2);
+            border: none;
+            box-shadow: 0px 0px 10px blue;
+            border-radius: 5px;
+        }
+
+        textarea {
+            color: white;
+            overflow: y;
+            height: 50px;
+            width: 200px;
+            background-color: rgb(0, 0, 0, 0.2);
+            border: none;
+            box-shadow: 0px 0px 10px blue;
+            border-radius: 6px;
+            margin-right: 25px;
+        }
+
+        form {
+            font-size: 20px;
+        }
+
+        .btn {
+            width: 60px;
+            box-shadow: 0px 0px 10px greenyellow;
+        }
+
+        form p {
+            text-shadow:
+                0 0 5px red,
+                0 0 5px red,
+                0 0 100px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Registration form</h1>
+        <form id="form">
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username">
+            <p style="display: inline-block;font-size: smaller;" id="a">Required field</p>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <p style="display: inline-block;font-size: smaller;" id="e">Valid Email address</p>
+            <br>
+            <label for="website">Website</label>
+            <input type="url" name="url" id="url" class="url" required>
+            <p style="display: inline-block;font-size: smaller;" id="u">valied url</p>
+            <br>
+            <label for="message" style="height: 50px; vertical-align: middle;">Message</label>
+            <textarea name="message" id="message"></textarea>
+            <p style="display: inline-block;font-size: smaller;height: 50px; vertical-align: middle;" id="m">Required field</p>
+            <br>
+            <input type="button" value="Submit" class="btn" id="btn">
+        </form>
+        <script>
+            function getText(a) {
+                return document.getElementById(a).value;
+            }
+            var btn = document.getElementById("btn");
+            var name = "";
+            var Email = "";
+            var Url = "";
+            var message = "";
+
+            function vibrator(b) {
+                var b = document.getElementById(b);
+                b.classList.add("vibrate");
+                setTimeout(() => {
+                    b.classList.remove("vibrate")
+                }, 600);
+            }
+            btn.onclick = function () {
+                name = getText("username");
+                Email = getText("email");
+                Url = getText("url");
+                message = getText("message");
+                btn.style.boxShadow = "0 0 5px 2px red";
+                setTimeout(() => {
+                    btn.style.boxShadow = "0px 0px 10px greenyellow";
+                }, 500);
+                var flag =true;
+
+                if (name == "") {
+                    vibrator("a");
+                    flag=false;
+                }
+                if(message==""){
+                    vibrator("m");
+                    flag=false;
+                }
+                let emailinput=document.getElementById("email");
+                if(!emailinput.checkValidity()){
+                    vibrator("e");
+                    flag=false;
+                }
+                let urlinput=document.getElementById("url");
+                if(!urlinput.checkValidity()){
+                    vibrator("u");
+                    flag=false;
+                }
+                if(flag==true){
+                    alert("Message :"+"Data saved")
+                    let form=document.getElementById("form");
+                    form.reset();
+                }
+            }
+
+
+        </script>
+
+
+    </div>
+
+
+</body>
+
+</html>
