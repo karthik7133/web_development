@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karthik.23bce20022</title>
     <style>
-        body{
+        body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -14,37 +15,48 @@
             background: url("https://images.unsplash.com/photo-1699046794977-5dd4cbbda48b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: 100% 100%;
             margin: 0px;
-        }.container{
+        }
+
+        .container {
             color: white;
             width: 60vh;
             height: 60vh;
-            background-color: rgb(0, 0, 0,0.2);
+            background-color: rgb(0, 0, 0, 0.2);
             font-size: 25px;
             padding: 20px;
             box-shadow: 0px 0px 20px rgb(31, 31, 97);
         }
-        label{
+
+        label {
             margin-right: 40px;
             margin-left: 100px;
-        }input{
-            background-color: rgb(23, 23, 73,0.6);
+        }
+
+        input {
+            background-color: rgb(23, 23, 73, 0.6);
             color: white;
             border: none;
             border-radius: 3px;
             box-shadow: 0px 0px 30px rgb(126, 102, 245);
             padding: 10px;
-        }#calc{
-            background-color: rgb(0, 0, 0,0.2);
+        }
+
+        #calc {
+            background-color: rgb(0, 0, 0, 0.2);
             border: none;
             padding: 5px;
             font-size: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 20px rgb(126, 102, 245);
             color: white;
-        }#calc:hover{
+        }
+
+        #calc:hover {
             box-shadow: 0px 0px 30px rgb(126, 102, 245);
-            background-color: rgb(0, 0, 0,0.5);
-        }.result div{
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+
+        .result div {
             margin-top: 100px;
             width: 33%;
             height: 140px;
@@ -54,9 +66,12 @@
         }
     </style>
 </head>
+
 <body>
     <div class="dup">
-        <HEADER><h1 style="color: white;text-align: center;">AGE CALCULATOR</h1></HEADER>
+        <HEADER>
+            <h1 style="color: white;text-align: center;">AGE CALCULATOR</h1>
+        </HEADER>
 
         <div class="container">
             <div style="margin-top: 100px;">
@@ -75,12 +90,12 @@
                 </div>
                 <div class="months">
                     <h1 style="font-size: 30px;padding: 0px;" id="b1">00</h1>
-                    
+
                     <p>MONTH</p>
                 </div>
                 <div class="days">
                     <h1 style="font-size: 30px;padding: 0px;" id="a1">00</h1>
-                    
+
                     <p>DAY</p>
                 </div>
             </div>
@@ -88,34 +103,41 @@
 
     </div>
     <script>
-        let day=document.getElementById("date").value;
-        let btn=document.getElementById("calc");
-        btn.onclick=function(){
-            let day=new Date(document.getElementById("date").value);
-            let today=new Date();
+        let day = document.getElementById("date").value;
+        let btn = document.getElementById("calc");
+        btn.onclick = function () {
+            let day = new Date(document.getElementById("date").value);
+            let today = new Date();
 
-            let years=today.getFullYear()-day.getFullYear();
-            let months=today.getMonth()-day.getMonth();
-            let days=today.getDate()-day.getDate();
+            let years = today.getFullYear() - day.getFullYear();
+            let months = today.getMonth() - day.getMonth();
+            let days = today.getDate() - day.getDate();
 
-            if(days<0){
-                months-=1;
-                let pevmonth=new Date(today.getFullYear(),today.getMonth(),0);
-                days+=pevmonth.getDate();
+            if (day > today) {
+                alert("You are in future come back to present!")
+            } else {
+                if (days < 0) {
+                    months -= 1;
+                    let pevmonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                    days += pevmonth.getDate();
+                }
+                if (months < 0) {
+                    years -= 1;
+                    months += 12;
+                }
+                document.getElementById("a1").innerText = days;
+                document.getElementById("b1").innerText = months;
+                document.getElementById("c1").innerText = years;
             }
-            if(months<0){
-                years-=1;
-                months+=12;
-            }
-            document.getElementById("a1").innerText=days;
-            document.getElementById("b1").innerText=months;
-            document.getElementById("c1").innerText=years;
+
+
 
         }
     </script>
-    
-    
-    
-    
+
+
+
+
 </body>
+
 </html>
