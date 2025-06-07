@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karthik</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -74,6 +79,14 @@
         .home-content h3 {
             font-size: 32px;
             font-weight: 700;
+        }
+
+        .home-content h3 span {
+            color: #0ef;
+        }
+
+        .home-content h3:nth-of-type(2) {
+            margin-bottom: 30px;
         }
 
         .home-content h1 {
@@ -139,15 +152,73 @@
         .image::before {
             content: "";
             position: absolute;
-            
             top: 15%;
             left: 0;
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            background: linear-gradient(to right,
+                    #10c3a5 0%,
+                    #c963b6 20%,
+                    #f6f1eb 50%,
+                    #b07ac2 80%,
+                    #4dfbe5 100%);
             filter: blur(20px);
             z-index: 0;
+        }
+
+        .about {
+            position: relative;
+            width: 100%;
+            justify-content: space-between;
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1583404629797-1330dd79dbfe?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            padding: 70px 10% 0;
+        }
+
+        .about-content {
+            display: block;
+            max-width: 600px;
+            height: 80%;
+            padding: 20px;
+            background: transparent;
+        }
+
+        .services {
+            position: relative;
+            width: 100%;
+            justify-content: center;
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1583404629797-1330dd79dbfe?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            padding: 70px 10% 0;
+        }
+
+        .heading h1 {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .boxes div {
+            margin-top: 100px;
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px #10c3a5;
         }
     </style>
 </head>
@@ -156,9 +227,9 @@
     <header class="head">
         <h3 class="logo">Portfolio</h3>
         <nav class="navbar">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Service</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Service</a>
             <a href="">Skills</a>
             <a href="">project</a>
             <a href="">Contact</a>
@@ -166,11 +237,11 @@
 
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello it's me</h3>
             <h1>karthik Chipinapi</h1>
-            <h3>And i'm a</h3>
+            <h3>And i'm a <span class="text"></span></h3>
             <p>i'm a software developer with extensive experience for over an year,
                 <br>expertise isto create and website and app design,Frontend design ,and many more....
             </p>
@@ -184,11 +255,67 @@
             <a href="#" class="btn-box">More About Me..</a>
         </div>
         <div class="image">
-            <img src="https://github.com/karthik7133/web_development/blob/main/mern%20ass_screenshorts/myprofile2.jpg?raw=true"
+            <img src="https://github.com/karthik7133/web_development/blob/main/mern%20ass_screenshorts/Picsart_25-06-07_16-49-27-475.png?raw=true"
                 alt="error">
 
         </div>
     </section>
+    <section class="about" id="about">
+
+        <div class="image">
+            <img src="https://github.com/karthik7133/web_development/blob/main/mern%20ass_screenshorts/Picsart_25-06-07_16-49-27-475.png?raw=true"
+                alt="error">
+
+        </div>
+        <div class="about-content">
+            <h1 style="display: inline-block;font-weight: 700;margin-bottom: 20px;font-size: 35px;">About <h1
+                    style="display: inline;color: #0ef;font-size: 35px;"> Me</h1>
+            </h1>
+            <h3 style="margin-bottom: 20px;">Full Stack Developer!</h3><br>
+            <p>I am a skilled Android developer with over 3 years of experience in the industry. My passion lies in
+                creating captivating mobile applications and implementing them through robust frontend and backend
+                development. I take pride in staying up-to-date with current design trends and leveraging my creativity
+                to produce visually appealing and user-friendly Android apps. Throughout my career, I have developed a
+                deep understanding of user experience (UX) and user interface (UI) principles.
+
+                By putting myself in the shoes of the end-users, I strive to create intuitive and seamless app
+                experiences. I believe that a well-designed mobile app should not only look visually appealing but also
+                provide a smooth and enjoyable interaction for users. When starting a new project, I thoroughly research
+                and analyze the target audience and the client’s specific requirements. This enables me to tailor my
+                applications to meet their expectations and deliver a unique mobile presence that aligns with their
+                brand identity.</p>
+
+            <br><br>
+            <h3
+                style="background-color:rgb(0, 0, 0,0.3);border-radius: 25px;display: inline-block;padding: 5px;box-shadow: 0px 0px 20px #0ef;">
+                <a href="#services" style="text-decoration: none;color: white;">My Services</a>
+            </h3>
+        </div>
+
+
+    </section>
+    <section class="services" id="services">
+        <div class="heading">
+            <h1 style="color: #0ef;margin-right: 10px;">My </h1>
+            <h1> Services</h1>
+        </div>
+        <div class="boxes">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+    </section>
+
+
+    <script>
+        var typed = new Typed(".text", {
+            strings: ["Frontend Developer", "Android Developer", "Software Developer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
 
 </body>
 
