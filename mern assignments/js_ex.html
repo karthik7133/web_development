@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:url("https://images.unsplash.com/photo-1710166755608-58b3d62db3a8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }.container{
+            
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            max-width: 600px;
+            background-color: rgb(0, 0, 0,0.3);
+            box-shadow: 0px 0px 20px blue;
+            padding: 50px;
+        }.input{
+            padding:20px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }.input input{
+            color: white;
+            padding: 15px;
+            border: none;
+            box-shadow: 0px 0px 20px white;
+            border-radius: 30px;
+            font-size: 20px;
+            background: none;
+        }.Operation{
+            padding:20px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly ;
+        }.Operation h3{
+            color: white;
+            padding: 10px;
+            margin: 20px;
+            border: none;
+            box-shadow: 0px 0px 20px white;
+            border-radius: 30px;
+            font-size: 20px;
+            background: transparent;
+            
+        }.Operation h3:hover{
+            cursor: pointer;
+            box-shadow: 0px 0px 30px white;
+            color: rgb(172, 185, 185);
+            background-color: rgb(0, 0, 0,0.3);
+        }.result{
+            padding:20px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+        }.ans{
+            padding: 10px;
+            width: 30%;
+            font-size: 25px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 5px;
+            cursor: default;
+            box-shadow: 0px 0px 20px rgb(189, 16, 219);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="Entert the string" id="hi">
+        </div>
+        <div class="Operation">
+            <h3 id="a">Reverse </h3>
+            <h3 id="b">Alphabetical order</h3>
+        </div>
+        <div class="result">
+            <div class="ans" id="r">
+                Result
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var input=document.getElementById("hi");
+        var rev=document.getElementById("a");
+        var order=document.getElementById("b"); 
+        var result=document.getElementById("r");
+        function R(s){
+            a="";
+            for(let i=0;i<s.length;i++){
+                a+=s.charAt(s.length-i-1);
+            }return a;
+        }
+        function alpha(s){
+            let list=s.split("");
+            var s="";
+            list.sort();
+            list.forEach(element => {
+                s+=element;
+            });return(s);
+        }
+        rev.onclick=function(){
+            var s=input.value;
+            result.innerText=R(s);
+        };
+        order.onclick=function(){
+            var s=input.value;
+            s=s.toLowerCase();
+            result.innerText=alpha(s);
+        }
+    </script>
+
+    
+</body>
+</html>

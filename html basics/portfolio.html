@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            color: #ededed;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 10%;
+            display: flex;
+            background: transparent;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .navbar a {
+
+            display: inline-block;
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #0ef;
+        }
+
+        .home {
+            position: relative;
+            width: 100%;
+            justify-content: space-between;
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1583404629797-1330dd79dbfe?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            padding: 70px 10% 0;
+        }
+
+        .home-content {
+            max-width: 600px;
+
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin: -3px 0;
+        }
+
+        .home-content p {
+            font-size: 20px;
+        }
+
+        .home-sci {
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10% 0;
+        }
+
+        .home-sci a {
+            padding: 10px;
+            border-radius: 50%;
+            color: #0ef;
+            border: 2px solid #0ef;
+            box-shadow: 0px 0px 20px #0ef;
+        }
+
+        .home-sci a:hover {
+            background-color: #0ef;
+            color: black;
+            box-shadow: 0px 0px 30px #0ef;
+        }
+
+        .btn-box {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .btn-box:hover {
+            color: #0ef;
+            text-shadow: 0px 0px 20px #0ef;
+        }
+
+        .image {
+            position: relative;
+            height: 80%;
+            display: inline-block;
+        }
+
+        .image img {
+            position: relative;
+            top: 15%;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: block;
+            z-index: 1;
+        }
+
+        .image::before {
+            content: "";
+            position: absolute;
+            top: 15%;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            filter: blur(20px);
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <h3 class="logo">Portfolio</h3>
+        <nav class="navbar">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Service</a>
+            <a href="">Skills</a>
+            <a href="">project</a>
+            <a href="">Contact</a>
+        </nav>
+
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello it's me</h3>
+            <h1>karthik Chipinapi</h1>
+            <h3>And i'm a</h3>
+            <p>i'm a software developer with extensive experience for over an year,
+                <br>expertise isto create and website and app design,Frontend design ,and many more....
+            </p>
+            <div class="home-sci">
+                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/karthi.chh/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/chipinapikarthik/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="mailto:karthik.23bce20022@vitap.ac.in" target="_blank"><i class='bx bxl-gmail'></i></a>
+            </div>
+            <a href="#" class="btn-box">More About Me..</a>
+        </div>
+        <div class="image">
+            <img src="https://github.com/karthik7133/web_development/blob/main/mern%20ass_screenshorts/photogalary%20(3).png?raw=true"
+                alt="error">
+
+        </div>
+    </section>
+
+</body>
+
+</html>
