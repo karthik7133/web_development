@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://images.unsplash.com/photo-1699046795017-01e7ea31af19?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }
+
+        .container {
+            width: 70vh;
+            max-width: 900px;
+            background-color: rgb(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 20px greenyellow;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-label {
+            min-width: 100px;
+            margin-right: 20px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        .needs-validation {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        .invalied {
+            color: red;
+        }
+
+        input {
+            border: none;
+            border-left: 1px solid black;
+
+        }
+
+        textarea {
+            overflow-y: auto;
+            border: none;
+            border-radius: 5px;
+            border-left: 1px solid black;
+        }
+
+        .send {
+            text-align: center;
+        }
+
+        #sendbtn {
+            border: none;
+            background: transparent;
+            color: white;
+            box-shadow: 0px 0px 20px green;
+            padding: 5px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="needs-validation" novalidate id="fa">
+            <div class="box">
+                <label for="firstName" class="form-label">First Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    <input type="text" class="fname" id="fname" placeholder="First Name" required>
+                    <div class="invalied" id="f"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="lastname" class="form-label">Last Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    <input type="text" class="lname" id="lname" placeholder="Last Name" required>
+                    <div class="invalied" id="l"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">E-Mail</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="email" id="email" placeholder="E-Mail Address" required>
+                    <div class="invalied" id="e"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">Phone #</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                    <input type="text" class="phno" id="phno" placeholder="(845)555-1212" required>
+                    <div class="invalied" id="ph"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">Address</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-home"></i></span>
+                    <input type="text" class="street" id="street" placeholder="Address" required>
+                    <div class="invalied" id="st"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">City</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-home"></i></span>
+                    <input type="text" class="city" id="city" placeholder="city" required>
+                    <div class="invalied" id="ci"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">State</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-flag"></i></span>
+                    <input type="text" class="state" id="state" placeholder="state" required>
+                    <div class="invalied" id="sta"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">Do you have hosting ?</label>
+                <div class="input-group!" style="display: flex;flex-direction: column;">
+                    <div class="opt1">
+                        <input type="radio" style="margin-right: 10px;" class="host" name="host"><label
+                            class="form-label"> yes</label>
+                    </div>
+                    <div class="opt2">
+                        <input type="radio" style="margin-right: 10px;" class="host" name="host"><label
+                            class="form-label"> no</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="email" class="form-label">Project Description</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-pen"></i></span>
+                    <textarea id="t"></textarea>
+                </div>
+            </div>
+
+            <div class="send" id="btn">
+                <button id="sendbtn">send</button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <script>
+        function ele(s) {
+            return document.getElementById(s);
+        }
+        function i(a) {
+            var flag = false;
+            if (a.value == "") {
+                flag = true;
+            } return (flag);
+        }
+        const fname = ele("fname");
+        const lname = ele("lname");
+        const mail = ele("email");
+        const phno = ele("phno");
+        const address = ele("street");
+        const city = ele("city");
+        const state = ele("state");
+        const btn = ele("sendbtn");
+
+        var vf = ele("f");
+        var vl = ele("l");
+        var ve = ele("e");
+        var vph = ele("ph");
+        var vad = ele("st");
+        var vci = ele("ci");
+        var vst = ele("sta");
+
+
+
+        btn.onclick = function (event) {
+            event.preventDefault();
+            var valid=true;
+            if (i(fname)) {
+                vf.innerText = "Please supply your first name";
+                valid = false;
+            }
+
+            if (i(lname)) {
+                vl.innerText = "Please supply your last name";
+                valid = false;
+            }
+            if (i(mail)) {
+                ve.innerText = "Please supply your email address";
+                valid = false;
+            }
+            if (i(phno)) {
+                vph.innerText = "Please supply your phone number";
+                valid = false;
+            }
+            if (i(address)) {
+                vad.innerText = "Please supply your street address";
+                valid = false;
+            }
+            if (i(city)) {
+                vci.innerText = "Please supply your city name";
+                valid = false;
+            }
+            if (i(state)) {
+                vst.innerText = "Please supply your state name";
+                valid = false;
+            }
+            if (valid) {
+                alert("Form submitted successfully!");
+               var alpha= document.querySelector("form");
+               alpha.reset();
+                
+            }
+
+        };
+
+
+    </script>
+
+</body>
+
+</html>
