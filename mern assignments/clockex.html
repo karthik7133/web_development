@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://images.unsplash.com/photo-1696643830146-44a8755f1905?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }
+
+        .container {
+            display: flex;
+            width: 70vw;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0.0.3);
+            box-shadow: 0px 0px 20px rgb(61, 61, 209);
+        }
+
+        button {
+            min-width: 80px;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            background-color: rgb(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 20px pink;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 50px rgb(210, 99, 117);
+        }
+
+        .content {
+            background-color: rgb(171, 107, 175, 0.4);
+            display: flex;
+            color: white;
+            width: max-content;
+            
+            padding: 10PX;
+            font-size: 25PX;
+            box-shadow: 0px 0px 20px white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <DIV class="content">
+            <div id="a"></div>
+            <div class="livetime" id="livetime">
+
+            </div>
+        </DIV>
+
+        <button class="start" id="start">Start</button>
+        <button class="end" id="end">End</button>
+    </div>
+
+    <script>
+        let intervalId;
+        const livetime = document.getElementById("livetime");
+        const start = document.getElementById("start");
+        const end = document.getElementById("end");
+        const d = document.getElementById("a");
+
+
+
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const months = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+
+        function setDateDisplay() {
+            const now = new Date();
+            const day = days[now.getDay()];
+            const date = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            d.innerText = `${day}, ${date} ${month} ${year} `;
+        }
+        setDateDisplay();
+
+        function updateclock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+
+            const offsetMinutes = now.getTimezoneOffset();
+            const offsetHours = Math.floor(Math.abs(offsetMinutes) / 60);
+            const offsetMins = Math.abs(offsetMinutes) % 60;
+            const sign = offsetMinutes <= 0 ? '+' : '-';
+            const gmtOffset = `GMT${sign}${String(offsetHours).padStart(2, '0')}:${String(offsetMins).padStart(2, '0')}`;
+
+
+            const timeZoneAbbr = "IST"
+
+            const formattedTime = `${time} ${gmtOffset} (${timeZoneAbbr})`;
+
+            livetime.innerText = formattedTime;
+        }
+
+        start.onclick = function () {
+            if (!intervalId) {
+                updateclock();
+                intervalId = setInterval(updateclock, 1000);
+            }
+        };
+        end.onclick = function () {
+            clearInterval(intervalId);
+            intervalId = null;
+        };
+    </script>
+
+</body>
+
+</html>
