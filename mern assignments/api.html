@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <style>
+        *{
+            color: white;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }
+
+        .container {
+            display: flex;
+            width: 70vw;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0.0.3);
+            box-shadow: 0px 0px 20px rgb(0, 0, 0);
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            border: none;
+            box-shadow: 0px 0px 20px black;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(0, 0, 255, 0.4);
+            border-radius: 20px;
+            margin-left: 10px;
+            color: white;
+            box-shadow: 0px 0px 20px white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 50px white;
+        }
+
+        .weather-info {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .weather-info h2 {
+            margin: 10px 0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search Button</button>
+
+        <div class="weather-info" id="weatherDisplay"></div>
+
+
+    </div>
+
+    <script>
+        async function getWeather() {
+            const city = document.getElementById("cityInput").value;
+            const apiKey = "faad279e047981b61535379e022411cc"; 
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.cod === 200) {
+                    const temp = data.main.temp;
+                    const cityName = data.name;
+                    const weather = data.weather[0].description;
+
+                    const now = new Date();
+                    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const day = now.toLocaleDateString('en-US', { weekday: 'long' });
+
+                    document.getElementById("weatherDisplay").innerHTML = `
+            <h2>${Math.round(temp)}°</h2>
+            <h3>${cityName}</h3>
+            <p>${time} ${day}</p>
+            <p>${weather}</p>
+          `;
+                } else {
+                    document.getElementById("weatherDisplay").innerHTML = `<p>City not found!</p>`;
+                }
+            } catch (error) {
+                document.getElementById("weatherDisplay").innerHTML = `<p>Error fetching data.</p>`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

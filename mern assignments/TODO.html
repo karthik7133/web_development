@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karthik.23bce20022</title>
+    <style>
+        *{
+            color: white;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("https://images.unsplash.com/photo-1678247539441-05ad26a18343?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: 100% 100%;
+        }
+
+        .container {
+            display: flex;
+            width: 70vw;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0.0.3);
+            box-shadow: 0px 0px 20px rgb(0, 0, 0);
+            border-radius: 5px;
+        }.input{
+            display: flex;
+        }input{
+            min-width: 30vw;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgb(255, 255, 255);
+            margin-right: 20px;
+        }.btn{
+            min-width: 80px;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgb(62, 50, 231);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TO DO</h1>
+        <div class="input">
+            <input type="text" required placeholder="Enter the task">
+            <button class="btn" id="btn">Add</button>
+        </div>
+        <div class="listholder">
+
+        </div>
+
+    </div>
+    <script>
+    const addBtn = document.getElementById("btn");
+    const input = document.querySelector(".input input");
+    const listHolder = document.querySelector(".listholder");
+
+    addBtn.onclick = function () {
+        const task = input.value.trim();
+        if (task === "") return;
+        const taskDiv = document.createElement("div");
+        taskDiv.style.display = "flex";
+        taskDiv.style.justifyContent = "space-between";
+        taskDiv.style.alignItems = "center";
+        taskDiv.style.margin = "5px 0";
+        taskDiv.style.background = "rgba(0, 0, 0, 0.3)";
+        taskDiv.style.padding = "10px";
+        taskDiv.style.borderRadius = "5px";
+        taskDiv.style.minWidth="50vw"
+        const taskText = document.createElement("span");
+        taskText.textContent = task;
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.style.marginLeft = "10px";
+        deleteBtn.style.padding = "5px 10px";
+        deleteBtn.style.border = "none";
+        deleteBtn.style.borderRadius = "5px";
+        deleteBtn.style.background = "#ff4d4d";
+        deleteBtn.style.color = "white";
+        deleteBtn.style.cursor = "pointer";
+        deleteBtn.onclick = function () {
+            listHolder.removeChild(taskDiv);
+        }
+        taskDiv.appendChild(taskText);
+        taskDiv.appendChild(deleteBtn);
+        listHolder.appendChild(taskDiv);
+        input.value = "";
+    }
+</script>
+
+    
+</body>
+</html>
